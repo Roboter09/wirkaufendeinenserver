@@ -4,16 +4,18 @@
         <meta charset="UTF-8">
         <title>Wir kaufen deinen Server</title>
         <link rel="stylesheet" href="source/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     </head>
 <body id="body">
     <nav class="nav-bar">
         <ul class="nav-menu">
-            <li>BILDBILDBILDBILD</li>
+            <img id="logo" src="source/wirkaufendeinenserver_logo.png" alt="wirkaufendeinenserver.de">
             <li><button class="nav-button">Server verkaufen</button></li>
             <li><button class="nav-button">Server bewerten</button></li>
             <li><button class="nav-button">Server kaufen</button></li>
             <li><button class="nav-button">Services</button></li>
             <li><button class="nav-button">Über uns</button></li>
+            <li><button class="nav-button" id="login_button"><b>Login</b></button></li>
         </ul>
     </nav>
 
@@ -58,12 +60,6 @@
 
         <button type="submit">Bewertung ansehen</button>
         </form>
-
-        <div class="partner-logos">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/ProSieben_2015_logo.svg" alt="ProSieben">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Welt_Logo_2018.svg/2560px-Welt_Logo_2018.svg.png" alt="Welt">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/DMAX_Logo.svg" alt="DMAX">
-        </div>
     </section>
 
     <footer>
@@ -81,5 +77,5 @@
     const span = document.querySelector('.animated-word');
     span.textContent = words[current];
     current = (current + 1) % words.length;
-  }, 3500); // Alle 3 Sekunden neues Wort
+  }, 3500); // Alle 3.5 Sekunden neues Wort
 </script>
