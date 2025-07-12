@@ -18,7 +18,7 @@
     </nav>
 
     <section class="hero-section">
-        <h1>Verkaufe dein Server <span>einfach</span></h1>
+        <h1>Verkaufe deinen Server <span class="animated-word">einfach</span></h1>
         <p>Ohne Stress zum Mega Preis – Erhalte direkt deinen finalen Verkaufspreis<br>
             und buche deinen Abgabe-Termin online</p>
 
@@ -42,6 +42,18 @@
             <option>2022</option>
             <option>2021</option>
             <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>2014</option>
+            <option>2013</option>
+            <option>2012</option>
+            <option>2011</option>
+            <option>2010</option>
+            <option>2009</option>
+            <option>2008</option>
         </select>
 
         <button type="submit">Bewertung ansehen</button>
@@ -60,3 +72,14 @@
         </div>
     </footer>
 </html>
+
+<script>
+  const words = ['einfach', 'schnell', 'bequem'];
+  let current = 1;
+
+  setInterval(() => {
+    const span = document.querySelector('.animated-word');
+    span.textContent = words[current];
+    current = (current + 1) % words.length;
+  }, 3500); // Alle 3 Sekunden neues Wort
+</script>

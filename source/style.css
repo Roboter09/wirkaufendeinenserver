@@ -43,10 +43,6 @@ body {
     justify-content: center;
 }
 
-.nav-menu li {
-  /* NICHT position: relative; – sonst wirkt ::before auf das falsche Element */
-}
-
 .nav-button {
     position: relative;
     background: none;
@@ -102,16 +98,14 @@ body {
 .hero-section {
   text-align: center;
   padding: 3rem 1rem;
+  font-family: sans-serif;
 }
 
 .hero-section h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #0e5a7c;
-  font-weight: 700;
-}
-
-.hero-section h1 span {
-  border-bottom: 4px solid #0e5a7c;
+  font-weight: 550;
+  text-decoration: none;
 }
 
 .hero-section p {
@@ -172,6 +166,38 @@ body {
   object-fit: contain;
 }
 
+
+.animated-word {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    animation: wordChange 3.5s infinite;
+}
+
+.animated-word::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 4px;
+    background-color: #0e5a7c;
+    width: 0%;
+    animation: underlineGrowShrink 3.5s infinite;
+}
+
+@keyframes underlineGrowShrink {
+    0%   { width: 0%; }
+    70%  { width: 100%; }
+    80%  { width: 100%; }
+    100% { width: 0%; }
+}
+
+@keyframes wordChange {
+    0%   { opacity: 0%; }
+    5%  { opacity: 100%; }
+    95%  { opacity: 100%; }
+    100% { opacity: 0%; }
+}
 
 
 
