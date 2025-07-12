@@ -99,6 +99,81 @@ body {
 
 
 
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #0e5a7c;
+  font-weight: 700;
+}
+
+.hero-section h1 span {
+  border-bottom: 4px solid #0e5a7c;
+}
+
+.hero-section p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.sell-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.sell-form label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.sell-form select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.sell-form button {
+  background-color: #f57c00;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sell-form button:hover {
+  background-color: #e86b00;
+}
+
+.partner-logos {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.partner-logos img {
+  height: 30px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+
+
 
 #footer-content {
     background-color: #4A4A4A;
