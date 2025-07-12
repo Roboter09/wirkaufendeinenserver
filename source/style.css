@@ -1,0 +1,112 @@
+body {
+    background-color: #fff;
+    overflow-x:hidden;
+}
+
+.nav-bar {
+    height: 70px;
+    background-color: #234D75;
+    text-align: center;
+    color:#fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu-button {
+    height: 100%;
+    border: none;
+    background-color: #234D75;
+    color: #fff;
+    text-align: center;
+    size: 15px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -5px;
+}
+
+.nav-bar {
+    background-color: #0e5a7c;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu li {
+  /* NICHT position: relative; – sonst wirkt ::before auf das falsche Element */
+}
+
+.nav-button {
+    position: relative;
+    background: none;
+    height: 70px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Linie nur über dem Button */
+.nav-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #f57c00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover */
+.nav-button:hover {
+  background-color: white;
+  color: #f57c00;
+}
+
+.nav-button:hover::before {
+  transform: scaleX(1);
+}
+
+/* Optional: aktiv markieren */
+.nav-button.active {
+  background-color: white;
+  color: #f57c00;
+}
+
+.nav-button.active::before {
+  transform: scaleX(1);
+}
+
+
+
+
+#footer-content {
+    background-color: #4A4A4A;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+}
+
