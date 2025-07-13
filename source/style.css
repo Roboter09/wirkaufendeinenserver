@@ -515,6 +515,28 @@ h3 {
 }
 
 
+#hertzinfakt {
+  height: 50px;
+  align-items: center;
+  margin-top: -20px;
+}
+
+
+
+.link {
+  height: 100%;
+  width: auto;
+}
+
+.link img {
+  height: 100%;
+  margin: 10px;
+}
+
+
+
+
+
 
 #footer-content {
     background-color: #4A4A4A;
