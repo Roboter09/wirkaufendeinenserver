@@ -462,11 +462,12 @@ h1 {
 }
 
 #ralf-dorn h1 {
-  margin-bottom: 0;
+  margin-bottom: -5px;
 }
 
 .video-block {
-  margin: -10px;
+  margin: -0px;
+  margin-bottom: -10px;
 }
 
 
