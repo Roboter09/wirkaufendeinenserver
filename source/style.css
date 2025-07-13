@@ -59,8 +59,8 @@ h1 {
     color: white;
     font-size: 15px;
     font-weight: normal;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
@@ -108,7 +108,7 @@ h1 {
 }
 
 #login_button {
-    margin-left: 100px;
+    margin-left: 80px;
 }
 
 
@@ -186,7 +186,7 @@ h1 {
 
 /* Hover für Desktop */
 
-@media (min-width: 1080px) {
+@media (min-width: 1025px) {
     /*
   .has-submenu:hover .submenu {
     display: block;
@@ -210,7 +210,7 @@ h1 {
 
 /* Mobile Styles */
 
-@media (max-width: 1079px) {
+@media (max-width: 1024px) and (min-width: 768px){
     .nav-menu{
         display:none;
     }
@@ -286,7 +286,57 @@ h1 {
 }
 
 
+/* Noch kleiner */
+@media (max-width: 767px) {
+  .nav-menu{
+        display:none;
+    }
 
+    .small-nav-menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menu-toggle {
+        font-size: 50px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin-left: 150px;
+    }
+
+    #menu-toggle:hover #vertical-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    #vertical-menu {
+        display: flex;
+        position: absolute;
+        top: 0px;
+        max-width: 720px;
+        height: 100px;
+        opacity: 1;
+    }
+
+    #vertical-menu-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        max-width: 720px;
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+}
 
 
 
@@ -401,8 +451,18 @@ h1 {
 
 
 #ralf-dorn {
-    text-align: center;
-    margin-top: -50px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 2rem auto;
+  margin-top: -50px;
+  max-width: 1200px;
+}
+
+#ralf-dorn h1 {
+  margin-bottom: 0;
 }
 
 
