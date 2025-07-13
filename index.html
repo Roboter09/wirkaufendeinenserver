@@ -7,6 +7,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     </head>
 <body id="body">
+    <canvas id="confetti-canvas"></canvas>
+
     <nav class="nav-bar">
         <ul class="nav-menu">
             <img class="logo" src="source/wirkaufendeinenserver_logo.png" alt="wirkaufendeinenserver.de">
@@ -37,12 +39,22 @@
         <div><p>MENU</p></div>
     </div>
 
+    <section class="space">
+
+    </section>
+
+    <section id="endgueltiger-verkaufspreis">
+        <h2>Endgültiger Verkaufspreis für deinen Server</h2>
+        <h3 id="letzter-preis">10.000€</h3>
+        <p id="letzter-preis-hinweis" class="disclaimer">Hinweis: Dieser Verkaufspreis ist für www.wirkaufendeinenserver.de nicht verbindlich.</p>
+    </section>
+
     <section class="hero-section">
         <h1>Verkaufe deinen Server <span class="animated-word">einfach</span></h1>
         <p>Ohne Stress zum Mega Preis – Erhalte direkt deinen finalen Verkaufspreis<br>
             und buche deinen Abgabe-Termin online</p>
 
-        <form class="sell-form">
+        <form class="sell-form" id="bewertung-form">
             <label for="marke">Von welcher Marke ist dein Server?</label>
             <select id="marke">
                 <option>Marke auswählen</option>
@@ -80,8 +92,7 @@
             <option>2009</option>
             <option>2008</option>
         </select>
-
-        <button type="submit">Bewertung ansehen</button>
+        <button type="submit" id="bewertung-ansehen-button">Bewertung ansehen</button>
         </form>
     </section>
 
@@ -104,6 +115,10 @@
 </html>
 
 <script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
     const words = ['einfach', 'schnell', 'bequem'];
     let current = 1;
 
@@ -125,4 +140,37 @@
         }
         window.location.href = 'https://linktr.ee/hertzinfakt';
     });
+
+    document.getElementById('bewertung-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('Formular wurde abgeschickt');
+
+        // window.location.href = 'https://linktr.ee/hertzinfakt';
+
+        document.getElementById('endgueltiger-verkaufspreis').style.display = 'block';
+
+        counter = 0;
+
+        const price_interval = setInterval(() => {
+            const price = document.getElementById('letzter-preis');
+            price.textContent = String(getRandomInt(1,99))+"."+String(getRandomInt(0,999))+" €";
+
+            counter += 1;
+
+            if(counter>=50) {
+                clearInterval(price_interval);
+
+                confetti.create(document.getElementById('confetti-canvas'), {
+                    resize: true,
+                    useWorker: true
+                })({
+                    particleCount: 250,
+                    spread: 100,
+                    origin: { y: 0.5 } 
+                });
+            }
+        }, 50);
+    });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
