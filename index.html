@@ -61,36 +61,26 @@
                 <option>HP</option>
                 <option>Dell</option>
                 <option>Lenovo</option>
+                <option>andere</option>
         </select>
 
-        <label for="modell">Wie groß ist dein Server?</label>
+        <label for="modell">Wie viele Kerne hat dein Server?</label>
         <select id="modell">
-            <option>Größe auswählen</option>
-            <option>0-1 m^3</option>
-            <option>1-5 m^3</option>
-            <option>5-20 m^3</option>
-            <option>20-100 m^3</option>
-            <option>100+ m^3</option>
+            <option>Anzahl Kerne auswählen</option>
+            <option>2 Kerne</option>
+            <option>4 Kerne</option>
+            <option>8 Kerne</option>
+            <option>16 Kerne</option>
+            <option>32+ Kerne</option>
         </select>
 
-        <label for="jahr">In welchem Jahr wurde er zugelassen?</label>
+        <label for="jahr">Wie viele Betriebsstunden hat dein Server?</label>
         <select id="jahr">
-            <option>Erstzulassung auswählen</option>
-            <option>2022</option>
-            <option>2021</option>
-            <option>2020</option>
-            <option>2019</option>
-            <option>2018</option>
-            <option>2017</option>
-            <option>2016</option>
-            <option>2015</option>
-            <option>2014</option>
-            <option>2013</option>
-            <option>2012</option>
-            <option>2011</option>
-            <option>2010</option>
-            <option>2009</option>
-            <option>2008</option>
+            <option>Betriebsstunden auswählen</option>
+            <option>unter 4000 Stunden</option>
+            <option>4000-8000 Stunden</option>
+            <option>8000-16000 Stunden</option>
+            <option>16000+ Stunden</option>
         </select>
         <button type="submit" id="bewertung-ansehen-button">Bewertung ansehen</button>
         </form>
@@ -162,7 +152,7 @@
 
         const price_interval = setInterval(() => {
             const price = document.getElementById('letzter-preis');
-            price.textContent = String(getRandomInt(1,99))+"."+String(getRandomInt(0,999))+" €";
+            price.textContent = String(getRandomInt(1,19))+"."+String(getRandomInt(0,999))+" €";
 
             counter += 1;
 
