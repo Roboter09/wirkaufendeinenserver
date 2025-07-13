@@ -13,8 +13,15 @@
             <li><button class="nav-button">Server verkaufen</button></li>
             <li><button class="nav-button">Server bewerten</button></li>
             <li><button class="nav-button">Server kaufen</button></li>
-            <li><button class="nav-button">Services</button></li>
-            <li><button class="nav-button">Über uns</button></li>
+            <li class="has-submenu">
+                <button class="nav-button">Services</button>
+                <ul class="submenu">
+                    <li><a href="#">Was ist mein Server wert?</a></li>
+                    <li><a href="#">Serverversicherung</a></li>
+                    <li><a href="#">Serverankauf</a></li>
+                </ul>
+            </li>
+            <li><button class="nav-button" id="ueber-uns-button">Über uns</button></li>
             <li><button class="nav-button" id="login_button"><b>Login</b></button></li>
         </ul>
     </nav>
@@ -33,9 +40,14 @@
                 <option>Lenovo</option>
         </select>
 
-        <label for="modell">Welches Modell?</label>
+        <label for="modell">Wie groß ist dein Server?</label>
         <select id="modell">
             <option>Modell auswählen</option>
+            <option>0-1 m^3</option>
+            <option>1-5 m^3</option>
+            <option>5-20 m^3</option>
+            <option>20-100 m^3</option>
+            <option>100+ m^3</option>
         </select>
 
         <label for="jahr">In welchem Jahr wurde er zugelassen?</label>
@@ -62,6 +74,17 @@
         </form>
     </section>
 
+    <section id="ralf-dorn">
+        <h1>Ralf Dorn empfielt!</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3y9nBPVriNo?si=l9udsG8x0zzGigzq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h1>Mehr von Ralf Dorn</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3y9nBPVriNo?si=l9udsG8x0zzGigzq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section>
+        <p><br><br><br><br></p>
+    </section>
+
     <footer>
         <div id="footer-content">
             <p>Hinweis: Diese Website ist eine nicht-kommerzielle Satire und steht in keiner Verbindung zur wirkaufendeinauto.de GmbH.</p>
@@ -70,12 +93,16 @@
 </html>
 
 <script>
-  const words = ['einfach', 'schnell', 'bequem'];
-  let current = 1;
+    const words = ['einfach', 'schnell', 'bequem'];
+    let current = 1;
 
-  setInterval(() => {
-    const span = document.querySelector('.animated-word');
-    span.textContent = words[current];
-    current = (current + 1) % words.length;
-  }, 3500); // Alle 3.5 Sekunden neues Wort
+    setInterval(() => {
+        const span = document.querySelector('.animated-word');
+        span.textContent = words[current];
+        current = (current + 1) % words.length;
+    }, 3500); // Alle 3.5 Sekunden neues Wort
+
+    document.getElementById('ueber-uns-button').addEventListener('click', function() {
+        window.location.href = 'https://linktr.ee/hertzinfakt';
+    });
 </script>
