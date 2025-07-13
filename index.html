@@ -144,8 +144,17 @@
     document.getElementById('bewertung-form').addEventListener('submit', function(event) {
         event.preventDefault();
         console.log('Formular wurde abgeschickt');
+        
+        const marke = document.getElementById('marke').selectedIndex;
+        const modell = document.getElementById('modell').selectedIndex;
+        const jahr = document.getElementById('jahr').selectedIndex;
 
-        // window.location.href = 'https://linktr.ee/hertzinfakt';
+        // Wenn eins der Felder noch auf der ersten Option steht (Index 0), abbrechen:
+        if (marke === 0 || modell === 0 || jahr === 0) {
+            document.getElementById('endgueltiger-verkaufspreis').style.display = 'none';
+            alert("Bitte fülle alle Felder aus, bevor du fortfährst.");
+            return;
+        }
 
         document.getElementById('endgueltiger-verkaufspreis').style.display = 'block';
 
