@@ -177,7 +177,16 @@
 
         const price_interval = setInterval(() => {
             const price = document.getElementById('letzter-preis');
-            price.textContent = String(getRandomInt(1,19))+"."+String(getRandomInt(0,999))+" €";
+        
+            rand = getRandomInt(0,999)
+            rest_price = String(rand)
+            if(rand<10) {
+                rest_price = "00"+String(rand)
+            } else if(rand<100) {
+                rest_price = "0"+String(rand)
+            }
+
+            price.textContent = String(getRandomInt(1,19))+"."+rest_price+" €";
 
             counter += 1;
 
