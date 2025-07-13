@@ -465,6 +465,10 @@ h1 {
   margin-bottom: 0;
 }
 
+.video-block {
+  margin: -10px;
+}
+
 
 #endgueltiger-verkaufspreis {
     display: none;
@@ -510,14 +514,16 @@ h3 {
 }
 
 
+
 #footer-content {
     background-color: #4A4A4A;
     color: #fff;
     position: fixed;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     right: 0;
     padding: 10px;
+    padding-top: 8px;
 }
 
 
