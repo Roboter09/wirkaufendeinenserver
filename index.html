@@ -9,7 +9,7 @@
 <body id="body">
     <nav class="nav-bar">
         <ul class="nav-menu">
-            <img id="logo" src="source/wirkaufendeinenserver_logo.png" alt="wirkaufendeinenserver.de">
+            <img class="logo" src="source/wirkaufendeinenserver_logo.png" alt="wirkaufendeinenserver.de">
             <li><button class="nav-button">Server verkaufen</button></li>
             <li><button class="nav-button">Server bewerten</button></li>
             <li><button class="nav-button">Server kaufen</button></li>
@@ -24,7 +24,18 @@
             <li><button class="nav-button" id="ueber-uns-button">Über uns</button></li>
             <li><button class="nav-button" id="login_button"><b>Login</b></button></li>
         </ul>
+        
+        <ul class="small-nav-menu">
+            <img class="logo" src="source/wirkaufendeinenserver_logo.png" alt="wirkaufendeinenserver.de">            
+            <button id="menu-toggle">☰</button>
+        </ul>
     </nav>
+
+    <div id="vertical-menu-div">
+        <div><p>MENU</p></div>
+        <div><p>Was ist mein Server wert?</p></div>
+        <div><p>MENU</p></div>
+    </div>
 
     <section class="hero-section">
         <h1>Verkaufe deinen Server <span class="animated-word">einfach</span></h1>
@@ -103,6 +114,15 @@
     }, 3500); // Alle 3.5 Sekunden neues Wort
 
     document.getElementById('ueber-uns-button').addEventListener('click', function() {
+        window.location.href = 'https://linktr.ee/hertzinfakt';
+    });
+
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        if(document.getElementById('vertical-menu-div').style.opacity == 1){
+            document.getElementById('vertical-menu-div').style.opacity = 0;
+        } else {
+            document.getElementById('vertical-menu-div').style.opacity = 1;
+        }
         window.location.href = 'https://linktr.ee/hertzinfakt';
     });
 </script>
